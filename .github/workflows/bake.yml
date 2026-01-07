@@ -49,6 +49,7 @@ jobs:
       - name: Build and push
         uses: docker/bake-action@v6
         with:
+          source: https://github.com/obseqia/obseqia-api.git#main
           push: true
           files: docker-bake.hcl
           targets: ${{ github.event.inputs.app_name }}
