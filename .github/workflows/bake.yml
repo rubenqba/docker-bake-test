@@ -47,5 +47,5 @@ jobs:
           files: docker-bake.hcl
           targets: ${{ github.event.inputs.app_name }}
           set: |
-            *.tags+=${{ steps.meta.outputs.tags }}
-            *.labels+=${{ steps.meta.outputs.labels }}
+            *.tags=${{ steps.meta.outputs.tags }}
+            *.labels=${{ steps.meta.outputs.labels }}
